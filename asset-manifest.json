@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/sppratt/react-app.git/static/css/main.e2e11695.css",
-    "main.js": "/sppratt/react-app.git/static/js/main.b741bb1b.js",
-    "static/js/787.ddb4019e.chunk.js": "/sppratt/react-app.git/static/js/787.ddb4019e.chunk.js",
-    "index.html": "/sppratt/react-app.git/index.html",
-    "main.e2e11695.css.map": "/sppratt/react-app.git/static/css/main.e2e11695.css.map",
-    "main.b741bb1b.js.map": "/sppratt/react-app.git/static/js/main.b741bb1b.js.map",
-    "787.ddb4019e.chunk.js.map": "/sppratt/react-app.git/static/js/787.ddb4019e.chunk.js.map"
+    "main.css": "/react-app/static/css/main.e2e11695.css",
+    "main.js": "/react-app/static/js/main.bbf0c1f4.js",
+    "static/js/787.ddb4019e.chunk.js": "/react-app/static/js/787.ddb4019e.chunk.js",
+    "index.html": "/react-app/index.html",
+    "main.e2e11695.css.map": "/react-app/static/css/main.e2e11695.css.map",
+    "main.bbf0c1f4.js.map": "/react-app/static/js/main.bbf0c1f4.js.map",
+    "787.ddb4019e.chunk.js.map": "/react-app/static/js/787.ddb4019e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e2e11695.css",
-    "static/js/main.b741bb1b.js"
+    "static/js/main.bbf0c1f4.js"
   ]
 }
