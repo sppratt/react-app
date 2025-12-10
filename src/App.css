@@ -36,3 +36,62 @@
     transform: rotate(360deg);
   }
 }
+
+h1{
+    margin-bottom: 12px;
+}
+.subtitle {
+    margin-top: 0px;
+    margin-bottom: 24px;
+    color: #FFFFFF;
+}
+
+.button-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.mood-button {
+    padding: 10px 18px;
+    border-radius: 999px;
+    border: none;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+}
+
+.mood-button.happy {
+    background-color: #4caf50;
+}
+
+.mood-button.calm {
+    background-color: #2196f3;
+}
+
+.mood-button.angry {
+    background-color: #ff5252;
+}
+
+.mood-button.reset {
+    background-color: #555;
+    margin-top: 24px;
+}
+
+.mood-display {
+    max-width: 480px;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.mood-display h2 {
+    margin: 12px 0 4px;
+}
+
+.emoji-line {
+    min-height: 2.5rem;
+    font-size: 2rem;
+    margin: 0;
+}

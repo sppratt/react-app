@@ -1,30 +1,68 @@
-import logo from './logo.svg';
 import './App.css';
-import TestComponent from "./components/TestComponent";
+import {useState} from 'react';
+import MoodButton from './components/MoodButton';
+import MoodDisplay from './components/MoodDisplay';
+import ResetButton from './components/ResetButton';
 
-const Comp = () => {
-  return <p>This is a comp component</p>
-}
+
 
 function App() {
-  return (
-    <div className="App" id='root'>
-            <TestComponent />
+    const [happiness, setHappiness] = useState(localStorage.getItem("happiness") || "");
+    const [calm, setCalm] = useState(localStorage.getItem("calm") || "");
+    const [anger, setAnger] = useState(localStorage.getItem("anger") || "");
 
+    return (
+    <div className="App" id='root'>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <Comp />
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+          <h1>Mood Tracker</h1>
+          <p className="subtitle">by Sami Pratt</p>
+
+          <div className="button-row">
+              <MoodButton
+                  label="Increase Happiness"
+                  colorClass="happy"
+                  onClick={() => {
+                      const newValue = happiness + "😊";
+                      setHappiness(newValue);
+                      localStorage.setItem("happiness", newValue);
+                  }}
+              />
+
+              <MoodButton
+                  label="Increase Calm"
+                  colorClass="calm"
+                  onClick={() => {
+                      const newValue = calm + "😌";
+                      setCalm(newValue);
+                      localStorage.setItem("calm", newValue);
+                  }}
+              />
+
+              <MoodButton
+                  label="Increase Anger"
+                  colorClass="angry"
+                  onClick={() => {
+                      const newValue = anger + "😡";
+                      setAnger(newValue);
+                      localStorage.setItem("anger", newValue);
+                  }}
+              />
+          </div>
+
+          <div className="mood-display">
+              <MoodDisplay title="Happiness" emojis={happiness} />
+              <MoodDisplay title="Calm" emojis={calm} />
+              <MoodDisplay title="Anger" emojis={anger} />
+          </div>
+
+          <ResetButton
+              onReset={() => {
+                  setHappiness("");
+                  setCalm("");
+                  setAnger("");
+                  localStorage.clear();
+              }}
+          />
       </header>
     </div>
   );
